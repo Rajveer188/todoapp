@@ -19,11 +19,11 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-        stage('Upload Artifact to S3') {
-            steps {
-                sh 'aws s3 cp target/maven-0.0.1-SNAPSHOT.jar s3://$S3_BUCKET/$IMAGE_NAME${BUILD_NUMBER}.jar'
-            }
-        }
+        // stage('Upload Artifact to S3') {
+        //     steps {
+        //         sh 'aws s3 cp target/maven-0.0.1-SNAPSHOT.jar s3://$S3_BUCKET/$IMAGE_NAME${BUILD_NUMBER}.jar'
+        //     }
+        // }
         stage('Docker Build & Push to ECR') {
             steps {
                 sh '''
