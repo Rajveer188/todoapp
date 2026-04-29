@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         AWS_REGION = 'us-east-1'
-        ECR_URI = '711784092484.dkr.ecr.us-east-1.amazonaws.com/project-ecr-repo'
+        ECR_URI = '992382652038.dkr.ecr.us-east-1.amazonaws.com/project-ecr-repo'
         IMAGE_NAME = 'todoapp'
         IMAGE_TAG = "${BUILD_NUMBER}"
         S3_BUCKET = 'devops-pro-artifacts'
